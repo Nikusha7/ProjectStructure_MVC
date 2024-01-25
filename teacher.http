@@ -1,0 +1,50 @@
+### Get All Teachers
+GET http://localhost:8081/teacher
+
+### Get teacher by id
+GET http://localhost:8081/teacher/id/9
+
+### Get teacher by subject
+GET http://localhost:8081/teacher/subject/PROGRAMMING
+
+### Add New Teacher
+POST http://localhost:8081/teacher/add
+Content-Type: application/json
+
+{
+  "name": "NIKA",
+  "gender": "MALE",
+  "subject": "PROGRAMMING",
+  "age": 18,
+  "email": "Nika@gmail.com",
+  "mobile": "595 93 92 91"
+}
+
+### Checking for error messages
+POST http://localhost:8081/teacher/add
+Content-Type: application/json
+
+{
+"name": "",
+"gender": null,
+"subject": null,
+"age": 14,
+"email": " ",
+"mobile": ""
+}
+
+###
+PUT http://localhost:8081/teacher/1
+Content-Type: application/json
+
+{
+  "name": "Meriem",
+  "gender": "FEMALE",
+  "subject": "BIOLOGY",
+  "age": 31,
+  "email": "mariam31@gmail.com",
+  "mobile": "595 93 92 91"
+}
+
+###
+DELETE http://localhost:8081/teacher/1
